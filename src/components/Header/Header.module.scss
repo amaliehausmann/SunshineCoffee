@@ -1,18 +1,18 @@
-.headerStyling {
-    background-color: lightblue;
-  h1 {
-    font-size: 5vw;
-    margin: auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: purple;
-  }
+@use '../../styles/placeholders' as *;
+@use '../../styles/variables' as *;
 
-  ul {
-    display: flex;
-    li {
-      list-style: none;
-      font-size: 2vw;
-      padding: 0 2vw;
-    }
+.headerStyling {
+background-image: url('../src/assets/hero.jpg');
+background-position: 0;
+background-repeat: no-repeat;
+
+  h1 {
+    font-size: 8vw;
+    color: $white;
+    @extend %licorice;
+    text-align: center;
+    padding: 8vw 0;
+    margin: auto;
+    font-weight: 100;
   }
 }

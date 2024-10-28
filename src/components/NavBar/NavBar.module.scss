@@ -1,0 +1,92 @@
+@use "../../styles/placeholders" as *;
+@use "../../styles/variables" as *;
+
+.navStyling {
+  display: flex;
+  background-color: $black;
+  justify-content: right;
+  position: relative;
+  z-index: 999;
+
+  .headingIcon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 41%;
+    width: fit-content;
+    z-index: 5;
+    li {
+      font-size: 3vw;
+      text-align: center;
+      list-style: none;
+
+      a {
+        color: white;
+        text-decoration: none;
+        @extend %licorice;
+      }
+    }
+
+    div {
+      position: absolute;
+      background-color: $black;
+      padding: 0;
+      border-radius: 50%;
+      width: 17vw;
+      height: 17vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+      top: -120%;
+
+      img {
+        width: 8vw;
+        margin-top: 5vw;
+      }
+    }
+  }
+
+  .rightNav {
+    display: flex;
+        padding: 0;
+        li {
+            color: $white;
+            list-style: none;
+            padding: 0 1vw;
+
+            svg{
+                height: 3vw;
+                width: 3vw;
+            }
+            a {
+              color: $white;
+            }
+    }
+  }
+
+  select {
+    border: 2px solid $white;
+    background-color: $black;
+    color: $white;
+    @extend %inter;
+    text-align: center;
+    border-radius: 5px;
+    width: 8vw;
+    height: 2vw;
+    margin-top: 0.5vw;
+    margin-right: 1vw;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+    font-size: 1vw;
+
+    option{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+  }
+}

@@ -6,30 +6,33 @@ import { CartContext } from "../context/CartContext";
 export const Products = () => {
   const [data, setData] = useState([]);
 
-  const { cartData } = useContext(CartContext);
-  console.log(cartData);
+  const { cartData, addToCart } = useContext(CartContext);
 
   useEffect(() => {
-    fetch("https://dummyjson.com/products?limit=0")
+    fetch("http://localhost:8081/products")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
+        console.log(data)
       });
   }, []);
 
   return (
     <section>
+      <h1>Products</h1>
       <ProductWrapper>
-        {data && data.products?.map((item) => (
-          <ProductCard
-            key={item.id}
-            title={item.title}
-            imageSrc={item.images[0]}
-            price={item.price}
-            description={item.description}
-          ></ProductCard>
-        ))}
+        {data &&
+          data?.map((item) => (
+            <ProductCard
+              key={item.id}
+              title={item.title}
+              imageSrc={item.image}
+              price={item.price}
+              description={item.description}
+            >
+              <button onClick={() => addToCart(item)}>Add To Cart</button>
+            </ProductCard>
+          ))}
       </ProductWrapper>
     </section>
   );
