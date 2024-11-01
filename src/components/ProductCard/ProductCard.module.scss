@@ -1,36 +1,470 @@
+@use "../../styles/placeholders" as *;
+@use "../../styles/variables" as *;
+
 .cardStyling {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: lightgray;
-    border-radius: 10px;
-    padding: 1vw;
-  img {
-    width: 100%;
-  }
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  padding: 1vw 2vw;
+  display: flex;
+  flex-direction: column;
 
-  h1{
-    font-size: 1.5vw;
-  }
-
-  h2{
-    font-size: 1.5vw;
-    color: blue;
-  }
-
-  p{
-    font-size: 1vw;
-  }
-
-  button{
-    background-color: purple;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5vw;
+  .imageStyling {
+    height: 23.5vw;
+    width: 23.5vw;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 5px;
     display: block;
     margin: auto;
-    border: none;
+  }
 
-    &:hover{
-        background-color: blueviolet;
+  h1 {
+    font-size: 5vw;
+    margin: auto;
+    text-align: center;
+    @extend %licorice;
+    font-weight: 100;
+    margin-bottom: 0.5vw;
+  }
+
+  h2 {
+    font-size: 1.5vw;
+    @extend %inika;
+    font-weight: 100;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 1.5vw;
+    margin-bottom: 0;
+    margin-top: 0;
+    @extend %inika;
+  }
+
+  .roastContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw 0;
+    p {
+      margin-right: 1vw;
+      @extend %inika;
+    }
+
+    .roastStyling {
+      display: block;
+      height: 0.5vw;
+      width: 0.5vw;
+      border-radius: 10px;
+      background-color: #e6e6e6;
+      border: 2px solid $darkbrown;
+      margin-right: 1vw;
+    }
+
+    .fillRoast {
+      background-color: $darkbrown;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    padding: 1vw 2vw;
+
+    .imageStyling {
+      height: 23.5vw;
+      width: 23.5vw;
+    }
+
+    h1 {
+      font-size: 5vw;
+      margin-bottom: 0.5vw;
+    }
+
+    h2 {
+      font-size: 2vw;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.5vw;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .roastContainer {
+      padding: 1vw 0;
+      p {
+        margin-right: 1vw;
+      }
+
+      .roastStyling {
+        height: 0.7vw;
+        width: 0.7vw;
+        margin-right: 1vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 1vw 2vw;
+
+    .imageStyling {
+      height: 23.5vw;
+      width: 23.5vw;
+    }
+
+    h1 {
+      font-size: 5.5vw;
+      margin-bottom: 0.5vw;
+    }
+
+    h2 {
+      font-size: 2vw;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.5vw;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .roastContainer {
+      padding: 1vw 0;
+      p {
+        font-size: 2vw;
+        margin-right: 1vw;
+      }
+
+      .roastStyling {
+        height: 1vw;
+        width: 1vw;
+        margin-right: 1vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 1vw 2vw;
+
+    .imageStyling {
+      height: 34vw;
+      width: 34vw;
+    }
+
+    h1 {
+      font-size: 7vw;
+      margin-bottom: 0.5vw;
+    }
+
+    h2 {
+      font-size: 3.5vw;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 2vw;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .roastContainer {
+      padding: 1vw 0;
+      p {
+        font-size: 2.5vw;
+        margin-right: 1vw;
+      }
+
+      .roastStyling {
+        height: 1.2vw;
+        width: 1.2vw;
+        margin-right: 1vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 1vw 2vw;
+
+    .imageStyling {
+      height: 60vw;
+      width: 60vw;
+    }
+
+    h1 {
+      font-size: 10vw;
+      margin-bottom: 0.5vw;
+    }
+
+    h2 {
+      font-size: 5vw;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 4vw;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .roastContainer {
+      padding: 1vw 0;
+      p {
+        font-size: 4vw;
+        margin-right: 1vw;
+      }
+
+      .roastStyling {
+        height: 2vw;
+        width: 2vw;
+        margin-right: 1vw;
+      }
+    }
+  }
+}
+
+.singleCard {
+  position: relative;
+  height: 60vw;
+  background-color: $white;
+  h1 {
+    font-size: 4vw;
+    @extend %licorice;
+    font-weight: 100;
+    position: absolute;
+    top: 15%;
+    margin: 0;
+    left: 54.5%;
+  }
+
+  .imageStyling {
+    height: 40vw;
+    width: 40vw;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 5px;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+  }
+
+  h2 {
+    position: absolute;
+    @extend %inika;
+    font-weight: 900;
+    left: 55%;
+    top: 25%;
+    font-size: 3vw;
+    color: $darkbrown;
+  }
+
+  p {
+    font-size: 1.69vw;
+    width: 40vw;
+    @extend %inika;
+    font-weight: 100;
+    position: absolute;
+    left: 55%;
+    top: 35%;
+  }
+
+  .roastContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw 0;
+    position: absolute;
+    left: 55%;
+    top: 17%;
+    p {
+      font-size: 2.5vw;
+      margin-right: 1vw;
+      @extend %inika;
+      font-weight: 100;
+      width: fit-content;
+      position: relative;
+      left: auto;
+    }
+
+    .roastStyling {
+      display: block;
+      height: 1vw;
+      width: 1vw;
+      border-radius: 10px;
+      background-color: #e6e6e6;
+      border: 2px solid $darkbrown;
+      margin-right: 1vw;
+    }
+
+    .fillRoast {
+      background-color: $darkbrown;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    height: 60vw;
+    h1 {
+      font-size: 4vw;
+      top: 20%;
+      left: 54.5%;
+    }
+
+    .imageStyling {
+      height: 40vw;
+      width: 40vw;
+      left: 10%;
+      top: 20%;
+    }
+
+    h2 {
+      left: 55%;
+      top: 30%;
+      font-size: 2.5vw;
+    }
+
+    p {
+      font-size: 1.5vw;
+      width: 40vw;
+      left: 55%;
+      top: 40%;
+    }
+
+    .roastContainer {
+      left: 55%;
+      top: 23%;
+      p {
+        font-size: 2vw;
+      }
+
+      .roastStyling {
+        height: 1vw;
+        width: 1vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    height: 60vw;
+    h1 {
+      font-size: 5vw;
+      top: 20%;
+      left: 54.5%;
+    }
+
+    .imageStyling {
+      height: 40vw;
+      width: 40vw;
+      left: 10%;
+      top: 20%;
+    }
+
+    h2 {
+      left: 55%;
+      top: 32%;
+      font-size: 3vw;
+    }
+
+    p {
+      font-size: 1.7vw;
+      width: 40vw;
+      left: 55%;
+      top: 42%;
+    }
+
+    .roastContainer {
+      left: 55%;
+      top: 26%;
+      p {
+        font-size: 2vw;
+      }
+
+      .roastStyling {
+        height: 1vw;
+        width: 1vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 150vw;
+    h1 {
+      font-size: 8vw;
+      top: 62%;
+      left: 10%;
+    }
+
+    .imageStyling {
+      height: 80vw;
+      width: 80vw;
+      left: 10%;
+      top: 7%;
+    }
+
+    h2 {
+      left: 45%;
+      top: 57%;
+      font-size: 10vw;
+    }
+
+    p {
+      font-size: 3vw;
+      width: 80vw;
+      left: 11%;
+      top: 75%;
+    }
+
+    .roastContainer {
+      left: 11%;
+      top: 66%;
+      p {
+        font-size: 3.5vw;
+      }
+
+      .roastStyling {
+        height: 1.5vw;
+        width: 1.5vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 180vw;
+    h1 {
+      font-size: 10vw;
+      top: 52%;
+      left: 10%;
+    }
+
+    .imageStyling {
+      height: 80vw;
+      width: 80vw;
+      left: 10%;
+      top: 7%;
+    }
+
+    h2 {
+      left: 76%;
+      top: 46%;
+      font-size: 10vw;
+    }
+
+    p {
+      font-size: 3.5vw;
+      width: 80vw;
+      left: 11%;
+      top: 63%;
+    }
+
+    .roastContainer {
+      left: 11%;
+      top: 57%;
+      p {
+        font-size: 4vw;
+      }
+
+      .roastStyling {
+        height: 1.5vw;
+        width: 1.5vw;
+      }
     }
   }
 }

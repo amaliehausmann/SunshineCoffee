@@ -1,3 +1,20 @@
+@use './styles/placeholders' as *;
+@use './styles/variables' as *;
+
+
 body{
     margin: 0;
+    background-color: #EFEFEF;
+
+    .errorStyling{
+        border: 2px solid rgb(190, 44, 44) !important;
+      }
+
+      .alertMessage{
+        color: $black;
+        font-size: 2vw;
+        @extend %inika;
+        text-align: center;
+        margin-top: 4vw;
+      }
 }

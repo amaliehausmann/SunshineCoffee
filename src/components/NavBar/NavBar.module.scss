@@ -13,7 +13,7 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    right: 41%;
+    right: 41.5%;
     width: fit-content;
     z-index: 5;
     li {
@@ -50,19 +50,19 @@
 
   .rightNav {
     display: flex;
-        padding: 0;
-        li {
-            color: $white;
-            list-style: none;
-            padding: 0 1vw;
+    padding: 0;
+    li {
+      color: $white;
+      list-style: none;
+      padding: 0 1vw;
 
-            svg{
-                height: 3vw;
-                width: 3vw;
-            }
-            a {
-              color: $white;
-            }
+      svg {
+        height: 3vw;
+        width: 3vw;
+      }
+      a {
+        color: $white;
+      }
     }
   }
 
@@ -83,10 +83,109 @@
     text-overflow: "";
     font-size: 1vw;
 
-    option{
-        padding: 0;
-        margin: 0;
-        text-align: center;
+    option {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  //MEDIA - Small desktop
+  @media screen and (max-width: 1300px) {
+    .headingIcon {
+      right: 42%;
+      li {
+        font-size: 4vw;
+      }
+
+      div {
+        top: -70%;
+      }
+    }
+  }
+  // MEDIA - Big tablet
+  @media screen and (max-width: 1000px) {
+    .headingIcon {
+      right: 42%;
+      li {
+        font-size: 4vw;
+      }
+
+      div {
+        top: -70%;
+      }
+    }
+
+    .rightNav {
+      li {
+        svg {
+          height: 4vw;
+          width: 4vw;
+        }
+      }
+    }
+
+    select {
+      width: 10vw;
+      height: 3vw;
+      font-size: 1.5vw;
+    }
+  }
+
+  //MEDIA - small tablet
+  @media screen and (max-width: 700px) {
+    .headingIcon {
+      right: 38%;
+      li {
+        font-size: 5vw;
+      }
+
+      div {
+        top: -40%;
+      }
+    }
+
+    .rightNav {
+      li {
+        svg {
+          height: 5vw;
+          width: 5vw;
+        }
+      }
+    }
+
+    select {
+      width: 12vw;
+      height: 4vw;
+      font-size: 2vw;
+    }
+  }
+  // MEDIA - phone
+  @media screen and (max-width: 500px) {
+    .headingIcon {
+      right: 38%;
+      li {
+        font-size: 6vw;
+      }
+
+      div {
+        top: -10%;
+      }
+    }
+
+    .rightNav {
+      li {
+        svg {
+          height: 6vw;
+          width: 6vw;
+        }
+      }
+    }
+
+    select {
+      width: 14vw;
+      height: 5vw;
+      font-size: 2.5vw;
     }
   }
 }

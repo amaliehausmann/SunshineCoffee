@@ -1,0 +1,169 @@
+@use "../../styles/placeholders" as *;
+@use "../../styles/variables" as *;
+
+.addToCart {
+  @extend %inika;
+  padding: 1vw;
+  background-color: transparent;
+  border: $darkgrey 2px solid;
+  border-radius: 5px;
+  font-size: 1.5vw;
+
+  &:hover {
+    background-color: $darkgrey;
+    border: $white 2px solid;
+    color: $white;
+    transition: 200ms ease-in-out;
+  }
+
+  @media screen and (max-width: 1300px) {
+    padding: 1vw;
+    font-size: 1.5vw;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 1vw;
+    font-size: 1.5vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 1vw;
+    font-size: 2.5vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 1vw;
+    font-size: 4vw;
+    margin: 2vw;
+  }
+}
+
+.clearCartButton {
+  background-color: $darkbrown;
+  color: $white;
+  border: 2px solid $darkbrown;
+  @extend %inika;
+  font-size: 1.5vw;
+  border-radius: 5px;
+  padding: 0.5vw 2vw;
+  display: block;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+
+  @media screen and (max-width: 1300px){
+    font-size: 1.5vw;
+    padding: 0.5vw 2vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  @media screen and (max-width: 1100px){
+    font-size: 2vw;
+    padding: 0.5vw 2vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  @media screen and (max-width: 700px){
+    font-size: 3vw;
+    padding: 0.5vw 2vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  @media screen and (max-width: 500px){
+    font-size: 4vw;
+    padding: 0.5vw 2vw;
+    margin-top: 2vw;
+    margin-bottom: 6vw;
+  }
+}
+
+.Gotocheckout {
+  background-color: $black;
+  border: 2px solid $black;
+  font-size: 1.5vw;
+  padding: 1vw 2vw;
+  border-radius: 5px;
+
+  a {
+    color: $white;
+    text-decoration: none;
+    @extend %inika;
+  }
+
+  @media screen and (max-width: 1300px){
+    font-size: 1.5vw;
+    padding: 1vw 2vw;
+  }
+
+  @media screen and (max-width: 1100px){
+    font-size: 2vw;
+    padding: 1vw 2vw;
+  }
+
+  @media screen and (max-width: 700px){
+    font-size: 3vw;
+    padding: 1vw 2vw;
+  }
+
+  @media screen and (max-width: 500px){
+    font-size: 4vw;
+    padding: 1vw 2vw;
+  }
+}
+
+.payNow {
+  background-color: $black;
+  color: $white;
+  @extend %inika;
+  border: 2px solid $black;
+  display: block;
+  margin: auto;
+  margin-right: 0;
+  margin-top: 8vw;
+  padding: 1vw 5vw;
+  font-size: 1.5vw;
+  border-radius: 5px;
+}
+
+.singleCard {
+  background-color: $black;
+  position: absolute;
+  right: 5%;
+  color: $white;
+  @extend %inika;
+  font-size: 2vw;
+  border-radius: 5px;
+  border: 2px solid $black;
+  top: 16%;
+  padding: 0.5vw 2vw;
+
+  &:hover {
+    background-color: $darkbrown;
+    transition: 300ms ease-in-out;
+  }
+
+  @media screen and (max-width: 1300px) {
+    top: 21%;
+    font-size: 1.5vw;
+  }
+
+  @media screen and (max-width: 1100px) {
+    top: 22%;
+    font-size: 1.7vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    top: 66%;
+    right: 10%;
+    font-size: 3vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    top: 58.5%;
+    right: 10%;
+    font-size: 4vw;
+  }
+}

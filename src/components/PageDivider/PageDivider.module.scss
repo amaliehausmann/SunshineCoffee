@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+
+.dividerStyling {
+  height: 1vw;
+  width: 100%;
+  background-color: $darkgrey;
+
+  @media screen and (max-width: 1300px) {
+    height: 1vw;
+  }
+
+  @media screen and (max-width: 1100px) {
+    height: 1.5vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 2vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 2.5vw;
+  }
+}

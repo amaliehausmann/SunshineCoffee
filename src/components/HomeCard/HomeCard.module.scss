@@ -1,0 +1,239 @@
+@use "../../styles/placeholders" as *;
+@use "../../styles/variables" as *;
+
+.threecards {
+  text-align: center;
+
+  h2 {
+    @extend %licorice;
+    font-size: 4vw;
+    font-weight: 100;
+    margin: 2vw 0;
+  }
+
+  p {
+    @extend %inika;
+    padding: 0 0.5vw;
+    font-size: 0.95vw;
+    height: 8vw;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  //   MEDIA - small desktop
+  @media screen and (max-width: 1300px) {
+    h2 {
+      font-size: 5vw;
+    }
+
+    p {
+      font-size: 1.2vw;
+      height: 12vw;
+    }
+  }
+
+  //   MEDIA - big tablet
+  @media screen and (max-width: 1100px) {
+    h2 {
+      font-size: 5vw;
+    }
+
+    p {
+      font-size: 1.5vw;
+      height: 18vw;
+    }
+  }
+
+  //   MEDIA - small tablet
+  @media screen and (max-width: 700px) {
+    h2 {
+      font-size: 12vw;
+    }
+
+    p {
+      font-size: 3vw;
+      height: fit-content;
+    }
+  }
+
+  //   MEDIA -  phone
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 14vw;
+    }
+
+    p {
+      font-size: 4vw;
+      height: fit-content;
+    }
+  }
+}
+
+.shopnow {
+  text-align: center;
+  h2 {
+    @extend %licorice;
+    font-size: 8vw;
+    margin: 0;
+    font-weight: 100;
+  }
+
+  p {
+    @extend %inika;
+    padding: 0 28vw;
+    font-size: 1.13vw;
+  }
+
+  button {
+    @extend %inika;
+    background-color: $darkgrey;
+    border: none;
+    padding: 1vw 5vw;
+    border-radius: 5px;
+    margin-top: 1vw;
+    border: 2px solid $darkgrey;
+
+    a {
+      text-decoration: none;
+      font-size: 1.2vw;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $white;
+      border: 2px solid $darkgrey;
+      transition: 200ms ease-in-out;
+
+      a {
+        color: $black;
+      }
+    }
+  }
+  //   MEDIA - Small desktop
+  @media screen and (max-width: 1300px) {
+    p {
+      font-size: 1.3vw;
+    }
+
+    button {
+      margin-top: 2vw;
+
+      a {
+        font-size: 1.5vw;
+      }
+    }
+  }
+
+  //   MEDIA - Big tablet
+  @media screen and (max-width: 1100px) {
+    p {
+      font-size: 1.5vw;
+      padding: 0 25vw;
+    }
+
+    button {
+      margin-top: 2vw;
+
+      a {
+        font-size: 1.5vw;
+      }
+    }
+  }
+
+  //   MEDIA - small tablet
+  @media screen and (max-width: 700px) {
+    h2 {
+      font-size: 12vw;
+    }
+
+    p {
+      font-size: 3vw;
+      padding: 0 15vw;
+    }
+
+    button {
+      margin-top: 2vw;
+
+      a {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  //   MEDIA - Phone
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 14vw;
+    }
+
+    p {
+      font-size: 4vw;
+      padding: 0 5vw;
+    }
+
+    button {
+      margin-top: 2vw;
+
+      a {
+        font-size: 4vw;
+      }
+    }
+  }
+}
+
+.testimonies {
+  text-align: center;
+
+  h2 {
+    @extend %inika;
+    font-size: 2vw;
+    font-weight: 100;
+    margin-top: 0;
+  }
+  p {
+    @extend %inika;
+    font-size: 1.1vw;
+  }
+
+  //   MEDIA - small desktop
+  @media screen and (max-width: 1300px) {
+    h2 {
+      font-size: 2.5vw;
+    }
+    p {
+      font-size: 1.3vw;
+    }
+  }
+
+  //   MEDIA - big tablet
+  @media screen and (max-width: 1100px) {
+    h2 {
+      font-size: 2.8vw;
+    }
+    p {
+      font-size: 1.5vw;
+    }
+  }
+
+  //   MEDIA - small tablet
+  @media screen and (max-width: 700px) {
+    h2 {
+      font-size: 4vw;
+    }
+    p {
+      font-size: 3vw;
+    }
+  }
+
+  //   MEDIA - Phone
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 6vw;
+    }
+    p {
+      font-size: 4vw;
+    }
+  }
+}

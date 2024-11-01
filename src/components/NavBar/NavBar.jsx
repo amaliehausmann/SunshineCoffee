@@ -1,9 +1,17 @@
+import { LanguageContext } from "../../context/LanguageContext";
 import { NavLink } from "react-router-dom";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { PiUserCircleLight } from "react-icons/pi";
 import style from "./NavBar.module.scss";
+import { useContext } from "react";
 
-export const NavBar = () => {
+export const NavBar = ({ action }) => {
+  const { setLanguageData, languageData } = useContext(LanguageContext);
+
+  function handleLanguageChange(event) {
+    setLanguageData(event.target.value === "dansk");
+  }
+
   return (
     <nav className={style.navStyling}>
       <ul className={style.headingIcon}>
@@ -16,12 +24,12 @@ export const NavBar = () => {
       </ul>
       <ul className={style.rightNav}>
         <li>
-          <select name="" id="">
-            <option value="dansk">Dansk</option>
+          <select onChange={handleLanguageChange} name="" id="">
             <option value="engelsk">English</option>
+            <option value="dansk">Dansk</option>
           </select>
         </li>
-        <li>
+        <li onClick={action}>
           <PiShoppingCartLight />
         </li>
         <li>

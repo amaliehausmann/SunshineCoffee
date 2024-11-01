@@ -21,13 +21,6 @@ export const CartContextProvider = ({ children }) => {
     }
   }
 
-  function removeFromCart(item) {
-    let clone = [...cartData];
-    let foundIndex = clone.findIndex((product) => product.id === item.id);
-    clone.splice(foundIndex, 1);
-    setCartData(clone);
-  }
-
   function clearCart() {
     setCartData([]);
   }
@@ -54,9 +47,9 @@ export const CartContextProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cartData,
+        setCartData,
         addToCart,
         clearCart,
-        removeFromCart,
         subtractCartItem,
       }}
     >
